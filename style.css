@@ -1,0 +1,760 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  width: 100%;
+  overflow-x: hidden; /* 防止水平滚动条 */
+  margin: 0;
+  cursor: none; /* 隐藏默认鼠标 */
+  z-index: 100;
+  background-color: black;
+}
+
+#pro{
+  color: transparent; /* 使文字本身颜色透明 */
+  -webkit-text-stroke-width: 0.5px; /* 设置描边宽度 */
+  -webkit-text-stroke-color: #ffffff; /* 设置描边颜色 */
+  font-family: "Anton", sans-serif;
+  font-size: 700%;
+  position:relative;
+  top: 80px; /* 距离顶部的距离 */
+  left: 3%; /* 距离右侧的距离 */
+  opacity: 0.5;
+  z-index: 200;
+}
+#floating-image {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  transition: transform 0.1s ease;
+  width: 40%; /* 你可以根据需要调整宽度 */
+  height: auto;
+  opacity: 1;
+}
+@media (max-width: 575.98px) {
+  #floating-image {
+    top: 20%;
+    left: 0.1%;
+    width: 150%; 
+  }
+}
+.me{
+  position:relative;
+  height: auto;
+}
+#me-image1 {
+  width: 20%; /* 你可以根据需要调整宽度 */
+  top: 160px;
+  left: 6%;
+}
+#me-image2 {
+  width: 26%; /* 你可以根据需要调整宽度 */
+  top: 20%;
+  left: 1%;
+}
+#emily {
+  width: 20%; /* 你可以根据需要调整宽度 */
+  margin-top: -15%;
+  margin-left: -11%;
+}
+.dec {
+  position: relative;
+  width: 60px; /* 你可以根据需要调整宽度 */
+  height: auto;
+  opacity: 1;
+  z-index: 200;
+  animation: flicker 2s infinite; /* 設置閃爍動畫，2秒循環一次 */
+}
+#dec-image1 {
+  top: 105px;
+  left: 24%;
+}
+#dec-image2 {
+  top: 5px;
+  left: 80%;
+}
+.project-img {
+  position: relative;
+  width: 30%;
+  height: auto;
+
+}
+
+#project01 {
+  left: -15%;
+  top: -30%;
+}
+#project02 {
+  left: -30%;
+  top: -30%;
+}
+.skill{
+  width: 15%; /* 你可以根据需要调整宽度 */
+  bottom:130px;
+  left: 11%;
+  position: relative;
+  height: auto;
+}
+.custom-cursor {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url('pixel.png'); /* 替换为你的 GIF 图像路径 */
+  background-size: cover;
+  pointer-events: none; /* 让鼠标图案不可点击 */
+  transition: transform 0.1s ease; /* 添加动画效果 */
+  transform: translate(-50%, -50%);
+  z-index: 10000; /* 设置一个很高的 z-index 值 */
+}
+.trail {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url('tail.png'); /* 替换为你的 GIF 图像路径 */
+  background-size: cover;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 8s ease, transform 5s ease; /* 添加淡出和移动的过渡效果 */
+}
+
+.trail-clickable {
+  background-image: url('cursor.png'); /* 替换为你的点击图案路径 */
+}
+.navbar-brand{
+  position: relative; /* 使用相对定位 */
+  left: 12px;
+  top: 2px; /* 向下移动10px，可以根据需要调整 */
+  font-family: "Anton", sans-serif;
+  letter-spacing: 3px;
+}
+.container.navbar-brand{
+  left: 180px; /* 距离左侧的距离 */
+  font-family: "Anton", sans-serif;
+}
+/* 定义基本样式 */
+
+.nav-item {
+  left: 580px; /* 距离左侧的距离 */
+  font-family: "Ysabeau SC", sans-serif;
+  font-size: 100%;
+}
+.custom-btn-container {
+    position: absolute;
+    top: 15px; /* 距离顶部的距离 */
+    right: 20px; /* 距离右侧的距离 */
+    display: flex; /* 使用 Flex 布局 */
+  }
+  
+  .custom-btn1 {
+    background: none; /* 设置按钮背景为透明 */
+    border: none; /* 移除按钮边框 */
+    padding: 0; /* 移除按钮内边距 */
+    margin-right: 5px; /* 设置按钮间距 */
+    opacity : 0.8;
+  }
+  .custom-btn1:hover {
+    opacity : 1;
+    color: #abffff;
+  }
+  .custom-btn2 {
+    background: none; /* 设置按钮背景为透明 */
+    border: none; /* 移除按钮边框 */
+    padding: 0; /* 移除按钮内边距 */
+    margin-right: 5px; /* 设置按钮间距 */
+    opacity : 0.8;
+  }
+
+  .custom-btn2:hover {
+    opacity : 1;
+    color: #abffff;
+  }
+
+  .custom-btn1 img {
+    width: 60px; /* 设置图片宽度 */
+    height: auto; /* 保持宽高比 */
+  }
+  .custom-btn2 img {
+    width: 30px; /* 设置图片宽度 */
+    height: auto; /* 保持宽高比 */
+  }
+   .btn btn-primary{
+      top: 100px; /* 距离顶部的距离 */
+    left: 20px; /* 距离右侧的距离 */
+  }
+  .nav-link {
+    position: relative;
+    color: rgba(255, 255, 255, 0.6); /* 低透明度的白色 */
+    text-decoration: none;
+    font-family: 'Ysabeau SC', sans-serif;
+    font-size: 130%;
+    transition: all 0.8s ease; /* 动画效果 */
+    background-size: 200%; /* 增加背景大小以便动画 */
+  }
+  /* about me 链接的样式 */
+.nav-link.about-me {
+  color: #ffffff; /* 白色 */
+}
+
+  /* project 链接的样式 */
+  .nav-link.project {
+    color: #ffffff; /* 白色 */
+  }
+  
+  /* 悬停时的效果 */
+  .nav-link:hover {
+    background: linear-gradient(to right, #87CEEB, #b6e4f7, #ffffff); /* 浅蓝色系渐变 */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; /* 使文字颜色透明以显示背景渐变 */
+  }
+  
+.carousel {
+  background-color: black;
+}
+  
+  .circle{
+    height: 23%;
+    width: 23%;
+   border-radius: 50%;
+   color: #ffffff;
+   font-size: 80%;
+   font-family: 'VT323', monospace;
+   text-transform: uppercase;
+   text-transform: 'Righteous';
+   text-align: center;
+   animation:spin 20s linear infinite ;
+   position: fixed;
+    top: 70%;
+    right: 1%;
+}
+@media (max-width: 575.98px) {
+  .circle{
+    font-size: 12px;
+    height: 15vh;
+    width: 15vh;
+    top: 80%;
+    left: 60%;
+}
+    }
+  /* 超大屏幕设备（Extra large devices, large desktops） */
+  @media (min-width: 1200px) {
+    .circle{
+      font-size: 16px;
+      height: 28vh;
+      width: 28vh;
+      top: 70%;
+      right: 5%;
+  }
+  }
+span{
+  position: absolute;
+  left:0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+}
+@keyframes spin{
+  0%{
+      transform: rotate(306deg);
+  }
+  100%{
+      transform: rotate(0);
+  }
+}
+
+.content {
+  background-color: black;
+  height: 100vh;
+}
+svg{
+  height: 8vh;
+  width: 8vh;
+   color: #ffffff;
+   position: fixed;
+    top: 77.5%;
+    left: 85.5%;
+    z-index: 999; /* 设置一个比其他元素更大的 z-index 值 */
+}
+
+h1 {
+  color: #ffffff;
+  font-family: "Anton", sans-serif;
+  font-size: 1000%;
+  position:relative;
+  top: 65%; /* 距离顶部的距离 */
+  left: 6%; /* 距离右侧的距离 */
+  display: flex; /* 使用 Flex 布局 */
+}
+
+h2 {
+  color: #ffffff;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 3px;
+  font-size: 500%;
+  position: relative;
+  top: 20%; /* 距离顶部的距离 */
+  left:6.5%; /* 距离右侧的距离 */
+  display: flex; /* 使用 Flex 布局 */
+}
+@media (max-width: 575.98px) {
+h1{
+  top: 90%; /* 距离顶部的距离 */
+  font-size: 500%;
+}
+h2{
+  top: 68%; /* 距离顶部的距离 */
+  font-size: 280%;
+}
+  }
+  /* 小屏幕设备（Small devices, portrait tablets and large phones） */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  h1{
+    top: 70%; /* 距离顶部的距离 */
+    font-size: 700%;
+  }
+  h2{
+    top: 34%; /* 距离顶部的距离 */
+    font-size: 360%;
+  }
+}
+/* 中等屏幕设备（Medium devices, landscape tablets） */
+@media (min-width: 768px) and (max-width: 1119.98px) {
+  h1{
+    top: 70%; /* 距离顶部的距离 */
+    font-size: 800%;
+  }
+  h2{
+    top: 40%; /* 距离顶部的距离 */
+    font-size: 400%;
+  }
+}
+/* 超大屏幕设备（Extra large devices, large desktops） */
+@media (min-width: 1200px) {
+  h1{
+    top: 70%; /* 距离顶部的距离 */
+    font-size: 1200%;
+  }
+  h2{
+    top: 36%; /* 距离顶部的距离 */
+    font-size: 700%;
+  }
+}
+
+h4 {
+  color: #d2f4ff;
+  font-family: "Anton", sans-serif;
+  font-size: 100%;
+  letter-spacing: 1px; /* 像素單位的字距 */
+  position:relative;
+  top: 67%; /* 距离顶部的距离 */
+  left: 380px; /* 距离右侧的距离 */
+  display: flex; /* 使用 Flex 布局 */
+}
+h5{
+  font-family: 'Ysabeau SC', sans-serif;
+  position: relative;
+}
+.pp1{
+  font-size: 16px;
+  color: #d2f4ff;
+  top: 30%;
+  text-align: center;
+}
+.pp2{
+  font-size: 13px;
+  color: #ffffff;
+  top: -33%;
+  left: 12%;
+}
+h6{
+  color: transparent; /* 使文字本身颜色透明 */
+  -webkit-text-stroke-width: 0.5px; /* 设置描边宽度 */
+  -webkit-text-stroke-color: #ffffff; /* 设置描边颜色 */
+  font-family: "Anton", sans-serif;
+  font-size: 700%;
+  position:relative;
+  top: 23%; /* 距离顶部的距离 */
+  left: 50%; /* 距离右侧的距离 */
+  opacity: 0.5;
+  z-index: 200;
+}
+.h7{
+  color: #d2f4ff;
+  font-family: "Anton", sans-serif;
+  font-size: 100%;
+  letter-spacing: 1px; /* 像素單位的字距 */
+  position:relative;
+  top: 15%;
+  left: 31%; /* 距离右侧的距离 */
+}
+.h8{
+  color: #d2f4ff;
+  font-family: "Anton", sans-serif;
+  font-size: 80%;
+  letter-spacing: 1px; /* 像素單位的字距 */
+  position:relative;
+  top: 25%;
+  left: 31%; /* 距离右侧的距离 */
+}
+.p-me{
+  color: #ffffff;
+  font-size: 80%;
+  letter-spacing: 1px; /* 像素單位的字距 */
+  position:relative;
+  top: 18%; /* 距离顶部的距离 */
+  left: 31%; /* 距离右侧的距离 */
+  display: flex; /* 使用 Flex 布局 */
+}
+.p-ex{
+  color: #ffffff;
+  font-size: 80%;
+  letter-spacing: 1px; /* 像素單位的字距 */
+  position:relative;
+  top: 28%; /* 距离顶部的距离 */
+  left: 31%; /* 距离右侧的距离 */
+  display: flex; /* 使用 Flex 布局 */
+}
+p{
+  color: #ffffff;
+  font-size: 80%;
+  letter-spacing: 1px; /* 像素單位的字距 */
+  position:relative;
+  top: 66%; /* 距离顶部的距离 */
+  left: 380px; /* 距离右侧的距离 */
+  display: flex; /* 使用 Flex 布局 */
+}
+.custom-line {
+  width: 45%;
+  height: 2px;
+  background: #ffffff  !important; /* 设置线条颜色 */
+  position: relative; /* 绝对定位 */
+  top: 60%; /* 距离顶部50% */
+  left: 31%; /* 距离左侧0 */
+}
+@media (max-width: 575.98px) {
+  h6{
+    font-size: 400%;
+  }
+  .h7{
+    font-size: 70%;
+  }
+  .h8{
+    font-size: 60%;
+  }
+  .p-me{
+    font-size: 50%;
+  }
+  .p-ex{
+    font-size: 50%;
+  }
+  .pp2{
+    font-size: 10px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  h6{
+    font-size: 500%;
+  }
+  .h7{
+    font-size: 80%;
+  }
+  .h8{
+    font-size: 70%;
+  }
+  .p-me{
+    font-size: 60%;
+  }
+  .p-ex{
+    font-size: 60%;
+  }
+  .pp2{
+    font-size: 11px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1119.98px) {
+  h6{
+    font-size: 800%;
+  }
+  .h7{
+    font-size: 100%;
+  }
+  .h8{
+    font-size: 100%;
+  }
+  .p-me{
+    font-size: 90%;
+  }
+  .p-ex{
+    font-size: 90%;
+  }
+  .pp2{
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  h6{
+    font-size: 1000%;
+  }
+  .h7{
+    font-size: 120%;
+  }
+  .h8{
+    font-size: 120%;
+  }
+  .p-me{
+    font-size: 110%;
+  }
+  .p-ex{
+    font-size: 110%;
+  }
+  .pp2{
+    font-size: 16px;
+  }
+}
+
+.text-container1 {
+  height: 90%;
+  margin-top: -220px; /* 向上移动整个容器，调整这个值 */
+  opacity: 0; /* 初始設置為透明 */
+  transform: translateY(50px); /* 從下往上移動50像素 */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* 添加過渡效果 */
+}
+
+.content2{
+  background-color: black;
+  font-family: "Anton", sans-serif;;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  height: 70vh;
+}
+.content4{
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  height: 30vh;
+}
+.carousel{
+  display: flex;
+  width: 60vw;
+  max-width: 800px;
+  height: 300px;
+
+}
+.panel{
+  position: relative;
+    width: 60px;
+    margin: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 30px;
+    /* 保持原有尺寸比例，裁切长边 */
+    background-size: cover;
+    /* 定位背景图像为正中间 */
+    background-position: center;
+    /* 过渡效果：时长 贝塞尔曲线 */
+    transition: 0.5s cubic-bezier(0.05,0.61,0.41,0.95);
+    overflow: hidden;
+}
+.panel h3{
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active{
+  flex: 1;
+  margin: 0;
+  border-radius: 40px;
+}
+
+.panel.active h3{
+  opacity: 1;
+  transition: opacity 0.3s ease-in0.4s;
+}
+
+.content3 {
+  background-color: rgb(0, 0, 0);
+  height: 60vh;
+
+}
+
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.image-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row; /* 设置为横向排列 */
+  gap: 20px; /* 图片间的间隔 */
+}
+
+.scroll-image {
+  width: 30vw;
+  height: 40vh;
+}
+
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-family: 'Ysabeau SC', sans-serif;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1.5px solid #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  top: 20px; /* 距离顶部的距离 */
+  left: 800px; /* 距离右侧的距离 */
+  overflow: hidden;
+  text-decoration: none; /* 移除链接的默认下划线 */
+  width: 130px; /* 调整按钮的宽度 */
+  height: 42px; /* 调整按钮的高度 */
+}
+
+.custom-button .arrow {
+  margin-top: 9px;
+  margin-left: 95px; /* 默认与文字的间距 */
+  transition: all 0.4s ease;
+}
+
+.custom-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #000000;
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+.custom-button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.custom-button:hover::before {
+  width: 100%;
+}
+.custom-button:hover .arrow {
+  margin-left: 100px;
+}
+
+.custom-button2 {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: 'Ysabeau SC', sans-serif;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1.5px solid #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  top: 200px;
+  right: 250px;
+  overflow: hidden;
+  text-decoration: none; /* 移除链接的默认下划线 */
+  width: 110px; /* 调整按钮的宽度 */
+  height: 42px; /* 调整按钮的高度 */
+}
+
+.custom-button2 .arrow {
+  margin-top: 9px;
+  margin-left: 75px; /* 默认与文字的间距 */
+  transition: all 0.4s ease;
+}
+
+.custom-button2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #000000;
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+
+.custom-button2:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.custom-button2:hover .arrow {
+  margin-left: 80px;
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  height: 10vh;
+  width: 100%;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 1rem;
+  letter-spacing: 1px; /* 像素單位的字距 */
+  font-family: 'Arial Black', sans-serif;
+  color: #fff;
+  animation: marquee 16s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+      transform: translateX(0%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+/* Add spacing between the duplicated content */
+.marquee-content::after {
+  content: ' ';
+  padding: 0 2rem; /* Adjust spacing here */
+}
+
+@media(max-width:520px){
+
+}
